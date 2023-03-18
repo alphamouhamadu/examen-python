@@ -1,4 +1,7 @@
 # THE DATACLASSES
+![test](img/logod.png)
+
+*************************************************************************************
 
 # **Table des matieres**
 1.[Introduction](## Introduction)  
@@ -27,7 +30,7 @@ Data classes are classes that contain one or more elements that are collected an
 
 Data classes allow developers to build powerful data structures without needing to write large amounts of code. They combine the best of object-oriented programming - inheritance, encapsulation, abstraction - and the increased flexibility and modularity of functional programming. 
 
-![Alt text](url"https://miro.medium.com/v2/resize:fit:626/1*h6WKhKfK3PU169NGy7DUCw.png")
+![test](img/image.png)
 
 ## Theory
 Dataclasses are based on Python's 'dataclasses' extension. These new data types are a subclass of the "object" class, with attributes and methods specific to an instance. Classes can contain various values such as strings, integers, lists etc.
