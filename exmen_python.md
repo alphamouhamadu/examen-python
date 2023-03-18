@@ -51,29 +51,32 @@ python
 from dataclasses import dataclass
 
 # declaration of a dataclass called "Person"
+```python
 @dataclass
 Person class:
     # definition of class attributes
     name: str
     age: int
- 
+``` 
 # class instantiation
+```python
 person_1 = Person("John", 22)
-
+```
 # display of name and age values
+```python
 print(person_1.name)
 print(person_1.age)
-
+```
 
 The code translates the following result:
-
+```python
 John
 22
-
+```
 ### Example 2
 Here is an example dataclass for a Person class that stores information such as name, age, and date of birth:
 
-python
+```python
 from dataclasses import dataclass
 
 @dataclass
@@ -81,24 +84,24 @@ class Person:
      name: str
      age: int
      date_of_birth: str
-
+```
 
 When you instantiate this class, it automatically stores the provided information. For example, to instantiate the class with values, you can write it as follows:
 
-python
+```python
 person1 = Person("John Doe", 25, "01/01/1995")
-
+```
 
 Once instantiated, you can access the different fields, modify them, etc. For example, to display the person's name, you can write:
 
-python
+```python
 print(person1.name)
 #John Doe
-
+```
 ### Example 3
 Let's say you want to create a customer management application. You can easily create a data class to represent customers using classData:
 
-py
+```py
 from dataclasses import dataclass
 
 @dataclass
@@ -108,31 +111,31 @@ class Customer:
      email: str
      orders: list
 
-
+```
 The ```Customer``` class has ```name```, ```address```, ```email``` and ```orders``` attributes, all defined in advance . You can create a new instance of the ```Customer``` class, providing values for each attribute:
 
-py
+```py
 customer = Customer(
      name="John Doe",
      address="123 Main Street",
      email="jdoe@example.com",
      orders=[Order(id=1, quantity=5), Order(id=2, quantity=3)]
 )
-
+```
 If you do not specify values for all attributes, a warning is generated:
 
-py
+```py
 customer = Customer(name="John Doe")
-
+```
 # Will display a warning
 # Warning: Missing attribute(s): address, email, orders
 
 
 If you try to assign a value to an attribute that is defined as ```read-only```, you will get an error:
 
-py
+```py
 customer.name = "Jane Doe"
-
+```
 ## Potentiel alternatives
 
 There are some alternatives to dataclasses in Python, such as named tuples and classes with class attributes. Named tuples allow you to easily define and access data fields without all the boilerplate code for defining a class and writing getters and setters. However, they are not as flexible as dataclasses, as they do not allow for overriding methods, instance variables, or other class members.
@@ -157,40 +160,42 @@ You can use data classes to create a dataset. The data class has attributes for 
 
 For example, if you wanted to create a dataset of weather data, you could create a data class called WeatherData with attributes such as city, temperature, humidity and pressure. 
 
-python
+```python
 class WeatherData:
     def __init__(self,city, temp, humidity, pressure):
         self.city = city
         self.temp = temp
         self.humidity = humidity
         self.pressure = pressure
+```        
 
 
 ### Interact with a Dataset
 
 You can use the built-in methods to interact with a dataset. For example, you could use the `__eq__` method to compare two objects of the same type. Here, we can compare two objects of type `WeatherData` to see if the temperatures are equal.
 
-python
+```python
 def __eq__(self, other):
     return self.temp == other.temp
-
+```
 
 You can also use the `__str__` method to create a string representation of an object. Here, we can create a string representation of an object of type `WeatherData` that contains the city, temperature, humidity and pressure. 
 
-python
+```python
 def __str__(self):
     return f"City: {self.city}, Temp: {self.temp}, Humidity: {self.humidity}, Pressure: {self.pressure}"
-
+```
 
 ### Analyze a Dataset 
 
 Using data classes makes it easier to analyze a dataset. For example, if you wanted to find the average humidity for the cities in your dataset, you could use the `__eq__` method to compare the humidity values and then calculate the average. 
 
-python
+```python
 humidity_vals = []
 for row in dataset:
     if row.humidity == other.humidity:
         humidity_vals.append(row.humidity)
+```       
 
 average_humidity = sum(humidity_vals) / len(humidity_vals)
 
