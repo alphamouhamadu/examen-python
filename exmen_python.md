@@ -44,7 +44,7 @@ Dataclasses take advantage of the fact that in Python, classes are defined as fu
 
 ## Pratical example 
 
-![test](imgagee/logod.png)
+![test](img/imagee.png)
 
 ### example 1
 Here is a simple example of creating a DataClass:
