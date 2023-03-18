@@ -1,5 +1,18 @@
 # THE DATACLASSES
 
+# **Table des matieres**
+1.[Introduction](## Introduction)  
+2.[Presentation of the concept ](#presentation-of-the-concept)   
+3.[Theory](#theory)  
+4.[Pratical example](#pratical-example)  
+a.[Example 1](#example-1)  
+b.[Example 2](#example-2)  
+c.[Example 3](#example-3)    
+5.[Potentiel alternatives](#potentiel-alternatives)  
+6.[Use case in data analysis](#use-case-in-data-analysis)  
+7.[Conclusion](#Conclusion)  
+8.[Ressource](#resources-consulted) 
+
 ## Introduction
 
 Python Data Classes provide an intuitive way of building composite data types from simple components, much as classes are often used as the foundational building blocks of object-oriented programming. Built on top of the language's powerful typing system, data classes provide a straightforward way for developers to efficiently manipulate complex data. 
@@ -57,7 +70,7 @@ John
 ### Example 2
 Here is an example dataclass for a Person class that stores information such as name, age, and date of birth:
 
-```python
+python
 from dataclasses import dataclass
 
 @dataclass
@@ -105,12 +118,12 @@ customer = Customer(
 
 If you do not specify values for all attributes, a warning is generated:
 
-```py
+py
 customer = Customer(name="John Doe")
 
 # Will display a warning
 # Warning: Missing attribute(s): address, email, orders
-```
+
 
 If you try to assign a value to an attribute that is defined as ```read-only```, you will get an error:
 
@@ -141,43 +154,43 @@ You can use data classes to create a dataset. The data class has attributes for 
 
 For example, if you wanted to create a dataset of weather data, you could create a data class called WeatherData with attributes such as city, temperature, humidity and pressure. 
 
-```python
+python
 class WeatherData:
     def __init__(self,city, temp, humidity, pressure):
         self.city = city
         self.temp = temp
         self.humidity = humidity
         self.pressure = pressure
-```
+
 
 ### Interact with a Dataset
 
 You can use the built-in methods to interact with a dataset. For example, you could use the `__eq__` method to compare two objects of the same type. Here, we can compare two objects of type `WeatherData` to see if the temperatures are equal.
 
-```python
+python
 def __eq__(self, other):
     return self.temp == other.temp
-```
+
 
 You can also use the `__str__` method to create a string representation of an object. Here, we can create a string representation of an object of type `WeatherData` that contains the city, temperature, humidity and pressure. 
 
-```python
+python
 def __str__(self):
     return f"City: {self.city}, Temp: {self.temp}, Humidity: {self.humidity}, Pressure: {self.pressure}"
-```
+
 
 ### Analyze a Dataset 
 
 Using data classes makes it easier to analyze a dataset. For example, if you wanted to find the average humidity for the cities in your dataset, you could use the `__eq__` method to compare the humidity values and then calculate the average. 
 
-```python
+python
 humidity_vals = []
 for row in dataset:
     if row.humidity == other.humidity:
         humidity_vals.append(row.humidity)
 
 average_humidity = sum(humidity_vals) / len(humidity_vals)
-```
+
 # Conclusion 
 In conclusion, dataclasses are a useful and powerful tool for quickly and easily defining classes with data fields. They allow for enhanced flexibility and make it easier to use type annotations for data fields. They are also well-suited for data analysis due to their usefulness when working with large data sets.
 DataClasses are a very handy tool for managing data and there are several alternatives to using them, including Dictionaries, Tuples, and Objects. Nevertheless, DataClasses have their own unique features that produce a very efficient solution for data processing.
