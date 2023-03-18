@@ -63,13 +63,13 @@ person_1 = Person("John", 22)
 # display of name and age values
 print(person_1.name)
 print(person_1.age)
-```
+
 
 The code translates the following result:
-```
+
 John
 22
-```
+
 ### Example 2
 Here is an example dataclass for a Person class that stores information such as name, age, and date of birth:
 
