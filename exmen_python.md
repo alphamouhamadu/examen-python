@@ -47,7 +47,7 @@ Dataclasses take advantage of the fact that in Python, classes are defined as fu
 ### example 1
 Here is a simple example of creating a DataClass:
 
-```python
+python
 from dataclasses import dataclass
 
 # declaration of a dataclass called "Person"
